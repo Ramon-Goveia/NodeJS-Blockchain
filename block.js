@@ -22,3 +22,6 @@ class Block{
     }
 
 }
+
+//Exportar classe
+module.exports = Block
