@@ -21,6 +21,12 @@ class Block{
                 `
     }
 
+    //Função bloco gênesis
+    static genesis(){
+        //retorna nova instância da classe bloco
+        return new this('Genesis time', '--------', '21032021', [])
+    }
+    
 }
 
 //Exportar classe
