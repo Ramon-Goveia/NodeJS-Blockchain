@@ -9,3 +9,4 @@ const block = new Block(
     '100'
     )
 console.log(block.toString())
+console.log(Block.genesis().toString())
