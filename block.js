@@ -31,12 +31,11 @@ class Block{
     static mineBlock(lastBlock, data) {
         const timestamp = Date.now()
         const lastHash = lastBlock.hash
-        const hash = 'a-fazer hash'
+        const hash = 'a-fazer-hash'
 
         return new this(timestamp, lastHash, hash, data)
     }
 
 }
-
 //Exportar classe
 module.exports = Block
