@@ -1,3 +1,5 @@
+const SHA256 = require('crypto-js/sha256')
+
 //Classe
 class Block{
     //Construtor
@@ -31,9 +33,14 @@ class Block{
     static mineBlock(lastBlock, data) {
         const timestamp = Date.now()
         const lastHash = lastBlock.hash
-        const hash = 'a-fazer-hash'
+        const hash = Block.hash(timestamp, lastHash, data)
 
         return new this(timestamp, lastHash, hash, data)
+    }
+
+    //Função hash SHA256
+    static hash(timestamp, lastHash, data){
+        return SHA256(`${timestamp}${lastHash}${data}`).toString()
     }
 
 }
